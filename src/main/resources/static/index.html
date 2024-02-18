@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kino Billetter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="BestillingBilletter.js"></script>
 </head>
 <body>
+<h1>Bestilling av kinobiletter</h1>
 
+<form id ="felter">
+    <label for="velgFilm">Velg film:</label>
+    <select id="velgFilm" name="input">
+        <option>Velg film her:</option>
+        <option>The Wizard of Oz</option>
+        <option>Star Wars: Episode IV</option>
+        <option>Fight Club</option>
+        <option>V For Vendetta</option>
+    </select>
+    <div id="feilFilm"></div><br>
+
+    <label for="antall">Antall:</label>
+    <input type="text" id="antall" name="input" style="margin-left: 21px; margin-bottom: 2px;">
+    <div id="feilAntall"></div>
+
+    <label for="fornavn">Fornavn:</label>
+    <input type="text" id="fornavn" name="input" style="margin-left: 8px; margin-bottom: 2px">
+    <div id="feilFornavn"></div>
+
+    <label for="etternavn">Etternavn:</label>
+    <input type="text" id="etternavn" name="input" style="margin-bottom: 2px">
+    <div id="feilEtternavn"></div>
+
+    <label for="telefonnr">Telefonnr:</label>
+    <input type="text" id="telefonnr" name="input" style="margin-bottom: 2px">
+    <div id="feilTelefonnr"></div>
+
+    <label for="epost">Epost:</label>
+    <input type="text" id="epost" name="input" style="margin-left: 25px;">
+    <div id="feilEpost"></div><br>
+</form>
+
+<button id="kjop" onclick="kjopBillett();">Kjøp billett</button>
+
+<h2>Alle biletter:</h2>
+<div id="divUt" style="text-align: center"></div>
+
+<button id="slett" onclick="slettBilletter();">Slett alle billettene</button>
 </body>
 </html>
